@@ -13,7 +13,7 @@ namespace WebApi_productCatalog.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ProductModel>().ToContainer("Products").HasPartitionKey(x => x.PartionKey);
+            modelBuilder.Entity<ProductModel>().ToContainer("Products").HasPartitionKey(x => x.PartitionKey);
         }
     }
 }

@@ -9,8 +9,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(x => x.UseCosmos(
-    builder.Configuration.GetSection("CosmosDb").GetValue<string>("ConnectionString"),
-    builder.Configuration.GetSection("CosmosDb").GetValue<string>("DatabaseName")
+builder.Configuration.GetSection("CosmosDb").GetValue<string>("ConnectionString"),
+builder.Configuration.GetSection("CosmosDb").GetValue<string>("DatabaseName")
 ));
 
 var app = builder.Build();
