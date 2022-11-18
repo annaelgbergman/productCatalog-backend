@@ -25,6 +25,7 @@ namespace WebApi_productCatalog.Controllers
             {
                 Id = Guid.NewGuid(),
                 PartitionKey = "Products",
+                ArticleNumber = product.ArticleNumber,
                 Name = product.Name,
                 Price = product.Price,
                 Description = product.Description,
